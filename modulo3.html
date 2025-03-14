@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Modulo 3</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="inicio.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Modulo 3: Energía y Trabajo</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h3>Presiona aquí</h3></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Modulo 1: Introducción a la Física</h3>
+                            <a onclick="changeContent('Concepto 1')">¿Qué es y por qué es importante la física?</a>
+                            <a onclick="changeContent('Concepto 2')">La física en la vida cotidiana</a>
+                            <a onclick="changeContent('Concepto 3')">Método científico aplicado a la física</a>
+                            <a onclick="changeContent('Concepto 4')">Unidades de Medida</a>
+                            <a onclick="changeContent('Concepto 5')">Conversión de unidades</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque error sequi dolore eaque tenetur? Quibusdam reprehenderit quasi iusto itaque totam ab accusamus distinctio placeat? Incidunt quas quisquam sunt voluptatem.
+                    </p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi ad aliquam, ab voluptatum perspiciatis in nam nihil, maxime sed quo deleniti? Dolor fugiat, non distinctio quaerat repellat aut quibusdam!
+                    </p>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, assumenda iure temporibus dolores molestias exercitationem consectetur sit ut nobis labore eveniet odit dolor numquam esse ullam qui dolorum corporis praesentium!
+                    </p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, tempora, pariatur soluta laudantium laboriosam vel eveniet quaerat inventore, molestias tenetur amet nulla. Ex suscipit eligendi, architecto quia impedit cupiditate qui!
+                    </p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quae veritatis ipsum aliquam totam harum sint adipisci, est repellendus, non deleniti incidunt maxime aperiam, accusamus eos quod laudantium facere animi.
+                    </p>
+                </div>
+            
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h3>Modulo 3: Energía y Trabajo</h3>
+                <a href="#" onclick="changeContent('Concepto 1.1')">¿Qué es y por qué es importante la física?</a>
+                <a href="#" onclick="changeContent('Concepto 2.2')">La física en la vida cotidiana</a>
+                <a href="#" onclick="changeContent('Concepto 3.3')">Método científico aplicado a la física</a>
+                <a href="#" onclick="changeContent('Concepto 4.4')">Unidades de Medida</a>
+                <a href="#" onclick="changeContent('Concepto 5.5')">Conversión de unidades</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime atque error sequi dolore eaque tenetur? Quibusdam reprehenderit quasi iusto itaque totam ab accusamus distinctio placeat? Incidunt quas quisquam sunt voluptatem.
+                    </p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quasi ad aliquam, ab voluptatum perspiciatis in nam nihil, maxime sed quo deleniti? Dolor fugiat, non distinctio quaerat repellat aut quibusdam!
+                    </p>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque, assumenda iure temporibus dolores molestias exercitationem consectetur sit ut nobis labore eveniet odit dolor numquam esse ullam qui dolorum corporis praesentium!
+                    </p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, tempora, pariatur soluta laudantium laboriosam vel eveniet quaerat inventore, molestias tenetur amet nulla. Ex suscipit eligendi, architecto quia impedit cupiditate qui!
+                    </p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5.5" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quae veritatis ipsum aliquam totam harum sint adipisci, est repellendus, non deleniti incidunt maxime aperiam, accusamus eos quod laudantium facere animi.
+                    </p>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="select.mod.html">Regresar al menú de modulos</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

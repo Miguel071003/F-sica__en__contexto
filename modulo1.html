@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Modulo 1</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="inicio.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Introducción a la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h3>Presiona aquí</h3></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Modulo 1: Introducción a la Física</h3>
+                            <a onclick="changeContent('Concepto 1')">¿Qué es y por qué es importante la física?</a>
+                            <a onclick="changeContent('Concepto 2')">La física en la vida cotidiana</a>
+                            <a onclick="changeContent('Concepto 3')">Método científico aplicado a la física</a>
+                            <a href="#" onclick="changeContent('Concepto 4')">Unidades de medida y Conversión de unidades</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h3>¿Qué es y por qué es importante?</h3>
+                    <p>Imagina que eres un súper detective, pero en lugar de resolver crímenes, investigas los misterios del universo. ¡Eso es la física! Es la ciencia que estudia cómo se mueven las cosas, qué las hace moverse y cómo interactúan entre sí. Piensa en el mundo como un gran parque de juegos: la física nos explica por qué la pelota rebota, por qué el columpio va y viene y por qué no flotamos en el aire. Estudia la materia (de lo que están hechas todas las cosas) y la energía (lo que hace que todo suceda) y cómo están conectadas. Desde los juguetes hasta las estrellas, la física está en todas partes.</p>
+
+                    <p>La física es clave para entender el mundo y construir cosas increíbles. Imagínate tratando de hacer una torre de bloques sin saber cómo mantenerla en equilibrio. La física nos enseña sobre estabilidad, lo que permite a los ingenieros diseñar edificios y puentes seguros. Muchos inventos que usamos a diario existen gracias a la física: la electricidad, las computadoras, los celulares, los aviones e incluso la tecnología médica. Es como el ingrediente secreto en todos nuestros aparatos geniales. Además, otras ciencias como la química y la biología dependen de la física, como si fuera la raíz de un árbol del que crecen muchas ramas.</p>
+
+                    <p>Entender la física impulsa avances en muchos campos. Nuestra vida moderna sería impensable sin sus descubrimientos, y otras ciencias la usan para construir su conocimiento. También, las analogías son una herramienta clave para explicar la física, no solo para niños, sino también entre expertos. Comparar conceptos difíciles con cosas más simples ayuda a comprenderlos mejor.</p>
+
+                    <p>Aprender física desde jóvenes es muy útil porque fomenta el pensamiento crítico y la resolución de problemas. Descubrir cómo funciona el mundo despierta la curiosidad y nos ayuda a desarrollar una mentalidad científica. Así que, más que una materia escolar, la física es una forma de ver y entender el universo.</p>
+                    <img src="img/img2.png" class="imagen">
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h3>La física en la vida cotidiana</h3>
+                    <p>La física no es solo algo que estudian los científicos en laboratorios; ¡está ocurriendo a tu alrededor todo el tiempo!</p>
+
+                    <p>Por ejemplo, una fuerza invisible llamada gravedad siempre está actuando. Imagina que la Tierra te da un abrazo gigante e invisible que mantiene todo en su lugar. ¡Eso es la gravedad! Es la razón por la que, cuando saltas, vuelves a caer, o por la que la lluvia baja del cielo en vez de flotar.</p>
+
+                    <p>También hay fuerzas que hacen que las cosas se muevan. Una fuerza es un empujón o un tirón que cambia la velocidad o dirección de algo. Piensa en cuando empujas un coche de juguete o jalas un carrito. Cuanto más fuerte lo hagas, más rápido irá. Un columpio, una bicicleta o una pelota en movimiento son ejemplos de fuerzas en acción. También está la inercia, que significa que las cosas quieren seguir haciendo lo mismo: si algo está quieto, seguirá quieto hasta que lo empujes, y si algo está en movimiento, seguirá moviéndose hasta que algo lo detenga.</p>
+
+                    <p>El sonido viaja en ondas, igual que cuando tiras una piedra a un estanque y ves cómo se forman ondas en el agua. Gracias a esto podemos escuchar música, hablar o escuchar el ladrido de un perro. La luz también viaja en ondas y nos permite ver. Imagina que el sol manda pequeños mensajeros de luz a tus ojos para mostrarte el mundo. Cuando ves tu reflejo en el agua o cuando la luz pasa por un objeto transparente, estás viendo la física en acción.</p>
+
+                    <p>La física también está en el calor, la electricidad y la fricción. El calor es la energía que hace que algo se caliente, como el sol sobre tu piel o una estufa cocinando comida. La electricidad es como una corriente invisible que alimenta luces y aparatos, viajando por cables como el agua en tuberías. La fricción es la fuerza que frena el movimiento de las cosas cuando se rozan, como cuando frotas tus manos y sientes que se calientan.</p>
+
+                    <p>La física está en todo lo que hacemos. Desde el calor de una estufa hasta el sonido de los audífonos o el simple hecho de caminar, cada movimiento sigue principios físicos. Cuando corres, la fricción entre tus zapatos y el suelo te permite avanzar sin resbalar.</p>
+
+                    <p>Incluso jugar es física en acción. Al andar en bicicleta, usas la inercia para moverte, aplicas fuerza con las piernas para acelerar, la gravedad te mantiene en el suelo y la fricción entre las llantas y el camino te ayuda a no resbalar. En un columpio, la inercia lo mantiene quieto hasta que lo empujas, la gravedad lo atrae de vuelta y la fricción con el aire y las cadenas lo detiene con el tiempo.</p>
+
+                    <p>Las analogías son clave para entender la física. Comparar conceptos con cosas cotidianas hace que sean más fáciles de imaginar. Por ejemplo, la ola en un estadio es una buena forma de entender cómo se mueven las ondas. La física no es algo complicado o lejano, está en todo lo que nos rodea, ayudándonos a entender el mundo de una manera más clara y divertida.</p>
+                    <img src="img/img3.png">
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h3>Método científico aplicado a la física</h3>
+                    <p>¿Alguna vez te has preguntado cómo los científicos descubren cosas sobre la física? Utilizan un proceso especial llamado método científico, que es como una guía paso a paso para resolver misterios sobre el mundo, ¡igual que un detective!. Imagina que ves una huella extraña en el jardín. El método científico es como seguir pistas para descubrir qué animal la hizo.</p>
+
+                    <p>Los pasos de este detective de la ciencia son:</p>
+
+                    <p>🔍 <strong>Observación:</strong> Primero, notas algo interesante, como cuando un detective encuentra una pista. Por ejemplo, puedes notar que algunos juguetes ruedan más lejos que otros.</p>
+                    <p>❓ <strong>Pregunta:</strong> Luego, te preguntas “¿por qué?” sobre lo que observaste. En este caso, podrías preguntarte: ¿Por qué este coche de juguete rueda más lejos que aquel?</p>
+                    <p>💡 <strong>Hipótesis:</strong> Después, haces una suposición educada sobre la respuesta. Es como cuando el detective hace una conjetura sobre un sospechoso. Aquí podrías decir: Tal vez el coche más pesado rueda más lejos.</p>
+                    <p>🧪 <strong>Experimento:</strong> Diseñas y realizas una prueba para comprobar tu suposición. ¡Recuerda cambiar solo una variable a la vez! Por ejemplo, podrías dejar rodar diferentes coches de juguete por una rampa y medir la distancia que recorren.</p>
+                    <p>📊 <strong>Análisis:</strong> Luego, examinas los resultados. ¿Qué descubriste? Es como cuando el detective reúne pruebas y saca conclusiones.</p>
+                    <p>✅ <strong>Conclusión:</strong> Finalmente, decides si tu hipótesis era correcta basándote en los datos. Si el coche más pesado no rodó más lejos, ¡tal vez necesites una nueva hipótesis!</p>
+                    <h4>Experimentos sencillos para practicar el método científico</h4>
+
+                    <ul><strong>🔵 El misterio de la pelota que rebota</strong>
+                        <li><strong>Observación:</strong> Las pelotas rebotan</li>
+                        <li><strong>Pregunta:</strong> ¿La altura desde la que cae una pelota afecta la altura a la que rebota?</li>
+                        <li><strong>Hipótesis:</strong> Si dejo caer la pelota desde más alto, rebotará más alto.</li>
+                        <li><strong>Experimento:</strong> Deja caer la misma pelota desde diferentes alturas y mide la altura de cada rebote.</li>
+                        <li><strong>Análisis:</strong> Compara las alturas de los rebotes.</li>
+                        <li><strong>Conclusión:</strong> ¿Tu hipótesis fue correcta?</li>
+                    </ul>
+
+                    <ul><strong>🚗 La carrera rodante</strong>
+                        <li><strong>Observación:</strong> Los coches de juguete ruedan por las rampas.</li>
+                        <li><strong>Pregunta:</strong> ¿Añadir peso a un coche de juguete lo hace rodar más rápido?</li>
+                        <li><strong>Hipótesis:</strong> Si añado peso al coche, rodará más rápido.</li>
+                        <li><strong>Experimento:</strong> Cronometra cuánto tarda un coche normal y otro con peso extra en rodar por la misma rampa.</li>
+                        <li><strong>Análisis:</strong> Compara los tiempos.</li>
+                        <li><strong>Conclusión:</strong> ¿El coche pesado realmente fue más rápido?</li>
+                    </ul>
+                    
+                    <p>El método científico no solo se usa en la física, sino en muchas áreas de la vida. Nos ayuda a tomar decisiones basadas en pruebas, a pensar de forma lógica y a resolver problemas de manera organizada.</p>
+
+                    <p>Incluso si una hipótesis no es correcta, sigue siendo un paso importante en la ciencia. A veces, un resultado inesperado nos lleva a hacer nuevas preguntas y descubrir cosas aún más interesantes. ¡Así es como avanza el conocimiento!</p>
+                    <img src="img/img4.png">
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h3>Unidades de medida y Conversión de unidades</h3>
+                    <p>Para poder hablar de física y entenderla bien, necesitamos formas precisas de medir las cosas. Imagina que quieres describirle a un amigo el tamaño de tu mesa. Si solo dices "es grande", él no sabrá exactamente a qué te refieres. Pero si dices "mide un metro y medio de largo", le darás una información clara y precisa. Las unidades de medida nos ayudan a describir el mundo de manera consistente.</p>
+
+                    <h4>El sistema métrico y sus unidades básicas</h4>
+
+                    <ul>La mayoría de los científicos de todo el mundo utilizan el sistema métrico. En física, algunas de las unidades más importantes son:
+                        <li><strong>Metro (m):</strong> Se usa para medir longitudes o distancias. Un metro es aproximadamente la longitud de un paso grande.</li>
+                        <li><strong>Kilogramo (kg):</strong> Mide la masa, es decir, cuánta "materia" tiene un objeto. Un kilogramo equivale al peso de una botella grande de agua.</li>
+                        <li><strong>Segundo (s):</strong> Se usa para medir el tiempo. Un segundo es aproximadamente el tiempo que tardas en decir "uno, Mississippi".</li>
+                    </ul>
+
+                    <ul>Para medir cosas muy grandes o muy pequeñas, usamos múltiplos y submúltiplos de estas unidades:
+                        <li><strong>Centímetro (cm):</strong> Más pequeño que un metro, como un paso de bebé.</li>
+                        <li><strong>Kilómetro (km):</strong> Mucho más grande, equivalente a muchos pasos grandes.</li>
+                        <li><strong>Gramo (g):</strong> Unidad más pequeña que el kilogramo, similar al peso de un clip de papel.</li>
+                    </ul>
+                    <img src="img/img5.png">
+                </div>
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h3>Introducción a la Física</h3>
+                <a href="#" onclick="changeContent('Concepto 1.1')">¿Qué es y por qué es importante la física?</a>
+                <a href="#" onclick="changeContent('Concepto 2.2')">La física en la vida cotidiana</a>
+                <a href="#" onclick="changeContent('Concepto 3.3')">Método científico aplicado a la física</a>
+                <a href="#" onclick="changeContent('Concepto 4.4')">Unidades de medida y Conversión de unidades</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <h3>¿Qué es y por qué es importante?</h3>
+                    <p>Imagina que eres un súper detective, pero en lugar de resolver crímenes, investigas los misterios del universo. ¡Eso es la física! Es la ciencia que estudia cómo se mueven las cosas, qué las hace moverse y cómo interactúan entre sí. Piensa en el mundo como un gran parque de juegos: la física nos explica por qué la pelota rebota, por qué el columpio va y viene y por qué no flotamos en el aire. Estudia la materia (de lo que están hechas todas las cosas) y la energía (lo que hace que todo suceda) y cómo están conectadas. Desde los juguetes hasta las estrellas, la física está en todas partes.</p>
+
+                    <p>La física es clave para entender el mundo y construir cosas increíbles. Imagínate tratando de hacer una torre de bloques sin saber cómo mantenerla en equilibrio. La física nos enseña sobre estabilidad, lo que permite a los ingenieros diseñar edificios y puentes seguros. Muchos inventos que usamos a diario existen gracias a la física: la electricidad, las computadoras, los celulares, los aviones e incluso la tecnología médica. Es como el ingrediente secreto en todos nuestros aparatos geniales. Además, otras ciencias como la química y la biología dependen de la física, como si fuera la raíz de un árbol del que crecen muchas ramas.</p>
+
+                    <p>Entender la física impulsa avances en muchos campos. Nuestra vida moderna sería impensable sin sus descubrimientos, y otras ciencias la usan para construir su conocimiento. También, las analogías son una herramienta clave para explicar la física, no solo para niños, sino también entre expertos. Comparar conceptos difíciles con cosas más simples ayuda a comprenderlos mejor.</p>
+
+                    <p>Aprender física desde jóvenes es muy útil porque fomenta el pensamiento crítico y la resolución de problemas. Descubrir cómo funciona el mundo despierta la curiosidad y nos ayuda a desarrollar una mentalidad científica. Así que, más que una materia escolar, la física es una forma de ver y entender el universo.</p>
+                    <img src="img/img2.png" class="imagen">
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h3>La física en la vida cotidiana</h3>
+                    <p>La física no es solo algo que estudian los científicos en laboratorios; ¡está ocurriendo a tu alrededor todo el tiempo!</p>
+
+                    <p>Por ejemplo, una fuerza invisible llamada gravedad siempre está actuando. Imagina que la Tierra te da un abrazo gigante e invisible que mantiene todo en su lugar. ¡Eso es la gravedad! Es la razón por la que, cuando saltas, vuelves a caer, o por la que la lluvia baja del cielo en vez de flotar.</p>
+
+                    <p>También hay fuerzas que hacen que las cosas se muevan. Una fuerza es un empujón o un tirón que cambia la velocidad o dirección de algo. Piensa en cuando empujas un coche de juguete o jalas un carrito. Cuanto más fuerte lo hagas, más rápido irá. Un columpio, una bicicleta o una pelota en movimiento son ejemplos de fuerzas en acción. También está la inercia, que significa que las cosas quieren seguir haciendo lo mismo: si algo está quieto, seguirá quieto hasta que lo empujes, y si algo está en movimiento, seguirá moviéndose hasta que algo lo detenga.</p>
+
+                    <p>El sonido viaja en ondas, igual que cuando tiras una piedra a un estanque y ves cómo se forman ondas en el agua. Gracias a esto podemos escuchar música, hablar o escuchar el ladrido de un perro. La luz también viaja en ondas y nos permite ver. Imagina que el sol manda pequeños mensajeros de luz a tus ojos para mostrarte el mundo. Cuando ves tu reflejo en el agua o cuando la luz pasa por un objeto transparente, estás viendo la física en acción.</p>
+
+                    <p>La física también está en el calor, la electricidad y la fricción. El calor es la energía que hace que algo se caliente, como el sol sobre tu piel o una estufa cocinando comida. La electricidad es como una corriente invisible que alimenta luces y aparatos, viajando por cables como el agua en tuberías. La fricción es la fuerza que frena el movimiento de las cosas cuando se rozan, como cuando frotas tus manos y sientes que se calientan.</p>
+
+                    <p>La física está en todo lo que hacemos. Desde el calor de una estufa hasta el sonido de los audífonos o el simple hecho de caminar, cada movimiento sigue principios físicos. Cuando corres, la fricción entre tus zapatos y el suelo te permite avanzar sin resbalar.</p>
+
+                    <p>Incluso jugar es física en acción. Al andar en bicicleta, usas la inercia para moverte, aplicas fuerza con las piernas para acelerar, la gravedad te mantiene en el suelo y la fricción entre las llantas y el camino te ayuda a no resbalar. En un columpio, la inercia lo mantiene quieto hasta que lo empujas, la gravedad lo atrae de vuelta y la fricción con el aire y las cadenas lo detiene con el tiempo.</p>
+
+                    <p>Las analogías son clave para entender la física. Comparar conceptos con cosas cotidianas hace que sean más fáciles de imaginar. Por ejemplo, la ola en un estadio es una buena forma de entender cómo se mueven las ondas. La física no es algo complicado o lejano, está en todo lo que nos rodea, ayudándonos a entender el mundo de una manera más clara y divertida.</p>
+                    <img src="img/img3.png">
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h3>Método científico aplicado a la física</h3>
+                    <p>¿Alguna vez te has preguntado cómo los científicos descubren cosas sobre la física? Utilizan un proceso especial llamado método científico, que es como una guía paso a paso para resolver misterios sobre el mundo, ¡igual que un detective!. Imagina que ves una huella extraña en el jardín. El método científico es como seguir pistas para descubrir qué animal la hizo.</p>
+
+                    <p>Los pasos de este detective de la ciencia son:</p>
+
+                    <p>🔍 <strong>Observación:</strong> Primero, notas algo interesante, como cuando un detective encuentra una pista. Por ejemplo, puedes notar que algunos juguetes ruedan más lejos que otros.</p>
+                    <p>❓ <strong>Pregunta:</strong> Luego, te preguntas “¿por qué?” sobre lo que observaste. En este caso, podrías preguntarte: ¿Por qué este coche de juguete rueda más lejos que aquel?</p>
+                    <p>💡 <strong>Hipótesis:</strong> Después, haces una suposición educada sobre la respuesta. Es como cuando el detective hace una conjetura sobre un sospechoso. Aquí podrías decir: Tal vez el coche más pesado rueda más lejos.</p>
+                    <p>🧪 <strong>Experimento:</strong> Diseñas y realizas una prueba para comprobar tu suposición. ¡Recuerda cambiar solo una variable a la vez! Por ejemplo, podrías dejar rodar diferentes coches de juguete por una rampa y medir la distancia que recorren.</p>
+                    <p>📊 <strong>Análisis:</strong> Luego, examinas los resultados. ¿Qué descubriste? Es como cuando el detective reúne pruebas y saca conclusiones.</p>
+                    <p>✅ <strong>Conclusión:</strong> Finalmente, decides si tu hipótesis era correcta basándote en los datos. Si el coche más pesado no rodó más lejos, ¡tal vez necesites una nueva hipótesis!</p>
+                    <h4>Experimentos sencillos para practicar el método científico</h4>
+
+                    <ul><strong>🔵 El misterio de la pelota que rebota</strong>
+                        <li><strong>Observación:</strong> Las pelotas rebotan</li>
+                        <li><strong>Pregunta:</strong> ¿La altura desde la que cae una pelota afecta la altura a la que rebota?</li>
+                        <li><strong>Hipótesis:</strong> Si dejo caer la pelota desde más alto, rebotará más alto.</li>
+                        <li><strong>Experimento:</strong> Deja caer la misma pelota desde diferentes alturas y mide la altura de cada rebote.</li>
+                        <li><strong>Análisis:</strong> Compara las alturas de los rebotes.</li>
+                        <li><strong>Conclusión:</strong> ¿Tu hipótesis fue correcta?</li>
+                    </ul>
+
+                    <ul><strong>🚗 La carrera rodante</strong>
+                        <li><strong>Observación:</strong> Los coches de juguete ruedan por las rampas.</li>
+                        <li><strong>Pregunta:</strong> ¿Añadir peso a un coche de juguete lo hace rodar más rápido?</li>
+                        <li><strong>Hipótesis:</strong> Si añado peso al coche, rodará más rápido.</li>
+                        <li><strong>Experimento:</strong> Cronometra cuánto tarda un coche normal y otro con peso extra en rodar por la misma rampa.</li>
+                        <li><strong>Análisis:</strong> Compara los tiempos.</li>
+                        <li><strong>Conclusión:</strong> ¿El coche pesado realmente fue más rápido?</li>
+                    </ul>
+                    
+                    <p>El método científico no solo se usa en la física, sino en muchas áreas de la vida. Nos ayuda a tomar decisiones basadas en pruebas, a pensar de forma lógica y a resolver problemas de manera organizada.</p>
+
+                    <p>Incluso si una hipótesis no es correcta, sigue siendo un paso importante en la ciencia. A veces, un resultado inesperado nos lleva a hacer nuevas preguntas y descubrir cosas aún más interesantes. ¡Así es como avanza el conocimiento!</p>
+                    <img src="img/img4.png">
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h3>Unidades de medida y Conversión de unidades</h3>
+                    <p>Para poder hablar de física y entenderla bien, necesitamos formas precisas de medir las cosas. Imagina que quieres describirle a un amigo el tamaño de tu mesa. Si solo dices "es grande", él no sabrá exactamente a qué te refieres. Pero si dices "mide un metro y medio de largo", le darás una información clara y precisa. Las unidades de medida nos ayudan a describir el mundo de manera consistente.</p>
+
+                    <h4>El sistema métrico y sus unidades básicas</h4>
+
+                    <ul>La mayoría de los científicos de todo el mundo utilizan el sistema métrico. En física, algunas de las unidades más importantes son:
+                        <li><strong>Metro (m):</strong> Se usa para medir longitudes o distancias. Un metro es aproximadamente la longitud de un paso grande.</li>
+                        <li><strong>Kilogramo (kg):</strong> Mide la masa, es decir, cuánta "materia" tiene un objeto. Un kilogramo equivale al peso de una botella grande de agua.</li>
+                        <li><strong>Segundo (s):</strong> Se usa para medir el tiempo. Un segundo es aproximadamente el tiempo que tardas en decir "uno, Mississippi".</li>
+                    </ul>
+
+                    <ul>Para medir cosas muy grandes o muy pequeñas, usamos múltiplos y submúltiplos de estas unidades:
+                        <li><strong>Centímetro (cm):</strong> Más pequeño que un metro, como un paso de bebé.</li>
+                        <li><strong>Kilómetro (km):</strong> Mucho más grande, equivalente a muchos pasos grandes.</li>
+                        <li><strong>Gramo (g):</strong> Unidad más pequeña que el kilogramo, similar al peso de un clip de papel.</li>
+                    </ul>
+                    <img src="img/img5.png">
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="modulo2.html">Siguiente Modulo</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradojas</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="inicio.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Paradojas de la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h3>Presiona aquí</h3></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Modulo 1: Introducción a la Física</h3>
+                            <a onclick="changeContent('Concepto 1')">Paradoja de la noche obscura</a>
+                            <a onclick="changeContent('Concepto 2')">Paradoja de la hoja de té</a>
+                            <a onclick="changeContent('Concepto 3')">Paradoja de los gemelos</a>
+                            <a onclick="changeContent('Concepto 4')">Paradoja del gato de Schrodinger</a>
+                            <a onclick="changeContent('Concepto 5')">Paradoja del abuelo</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h3>Paradoja de la Noche Oscura</h3>
+                    <p>La Paradoja de la Noche Oscura se refiere a un misterio en el universo relacionado con la luz y el espacio. En términos simples, trata de la pregunta de por qué el cielo nocturno es oscuro, incluso si el universo es infinito y está lleno de estrellas. La idea es que, si el universo fuera infinito y estuviera lleno de estrellas distribuidas por todas partes, debería haber suficiente luz de esas estrellas para iluminar el cielo, y sin embargo, el espacio parece ser oscuro. Esta contradicción fue formulada por el astrónomo alemán Heinrich Olbers en el siglo XIX.</p>
+
+                    <p>La paradoja desafía nuestra intuición, porque si hay tantas estrellas en el universo, debería haber luz en todas direcciones, haciendo que el cielo sea brillante, no oscuro. Esto parece extraño, pero la resolución de la paradoja tiene que ver con la expansión del universo, la finitud de la edad del universo y la absorción de la luz.</p>
+
+                    <p>Hoy sabemos que el universo no es estático ni infinito en el sentido clásico, sino que está en expansión. La luz de las estrellas más distantes ha tenido que recorrer grandes distancias, y algunas de ellas no llegan a nosotros porque el universo es finito y las estrellas más lejanas están demasiado lejos para que su luz nos llegue. Además, la luz de las estrellas más distantes se desplaza hacia longitudes de onda más largas (desplazamiento al rojo), lo que también contribuye al oscurecimiento del cielo.</p>
+
+                    <p>Para explicarlo con una analogía, imagina que estás en un cuarto oscuro, pero dentro del cuarto hay muchas velas encendidas. Si miras en todas las direcciones, esperas ver luz. Sin embargo, si te alejas mucho de cada vela, la luz de esas velas se va desvaneciendo hasta que ya no puedes verla, incluso si las velas están encendidas. Esto sucede en el universo: aunque hay muchísimas estrellas, algunas están tan lejos que su luz no llega hasta nosotros, por lo que el cielo es oscuro.</p>
+
+                    <p>Otra forma de entenderlo es pensar en un árbol lleno de luces navideñas. Si estás cerca del árbol, puedes ver todas las luces, pero si te alejas mucho, las luces empiezan a verse más tenues y eventualmente ya no se ven. El universo tiene muchas "luces" (estrellas), pero están tan distantes que el cielo entre ellas no tiene luz suficiente para hacerlo brillar.</p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h3>Paradoja de la hoja de té</h3>
+                    <p>La Paradoja de la Hoja de Té es un concepto que proviene de la mecánica de fluidos y describe un fenómeno que ocurre cuando pones una hoja de té flotando en un líquido, como en una taza de té. La paradoja radica en que, a medida que el té se agita, la hoja de té comienza a moverse hacia el centro del vaso en lugar de moverse hacia las paredes, como podríamos esperar si solo pensáramos en la forma en que los objetos tienden a ir hacia los bordes debido a la fuerza centrífuga.</p>
+
+                    <p>Lo interesante de esta paradoja es que en un sistema rotatorio, como cuando estamos girando el té en la taza, la hoja de té no sigue la lógica de la rotación hacia las paredes (como ocurre con otros objetos que se desplazan hacia afuera cuando giran). En cambio, la hoja se dirige hacia el centro del vaso. Este comportamiento ocurre porque, en el caso de un fluido en movimiento, las fuerzas involucradas en la dinámica de la rotación y la interacción entre el fluido y el objeto (la hoja) hacen que la hoja se mueva hacia el centro.</p>
+
+                    <p>La paradoja puede ser explicada por la dinámica de los flujos en la taza. El agua en el centro de la taza se mueve más lentamente que el agua cerca de las paredes, lo que genera una especie de "vacío" en el centro que arrastra la hoja de té hacia él. A pesar de la fuerza centrífuga que normalmente empuja los objetos hacia afuera, la hoja de té se ve influenciada por las corrientes y el movimiento del líquido, lo que resulta en que se mueva hacia el centro de la taza.</p>
+
+                    <p>Para entenderlo con una analogía, imagina que estás en un carrusel (un tipo de rueda giratoria). Si solo te paras en el borde, sientes que eres empujado hacia afuera debido a la velocidad de la rotación. Sin embargo, si en lugar de estar en el borde, te pones en el centro del carrusel, verás que no experimentas esa misma sensación de "empuje". Algo similar pasa con la hoja de té: en lugar de ir hacia las paredes, va al centro, como si estuviera en el lugar más tranquilo del movimiento.</p>
+
+                    <p>Es un buen ejemplo de cómo las interacciones entre los objetos y su entorno (en este caso, el líquido) pueden generar resultados que no esperaríamos de forma intuitiva.</p>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h3>Paradoja de los gemelos</h3>
+                    <p>La Paradoja de los Gemelos es una famosa consecuencia de la teoría de la relatividad especial de Einstein. Esta paradoja describe una situación en la que dos gemelos, uno de los cuales viaja al espacio a una velocidad cercana a la de la luz, y el otro se queda en la Tierra, experimentan el paso del tiempo de manera diferente.</p>
+
+                    <p>La idea básica es que el gemelo que viaja en la nave espacial (en movimiento) experimenta el dilata del tiempo, lo que significa que su tiempo pasa más lentamente que el del gemelo que permanece en la Tierra. Cuando el gemelo viajero regresa a la Tierra, descubrirá que ha envejecido menos que su gemelo que se quedó en casa, a pesar de que ambos comenzaron como gemelos idénticos. Esto se debe a que, a medida que viaja a altas velocidades, el tiempo para el gemelo en la nave se "altera" y transcurre más despacio en comparación con el gemelo en reposo en la Tierra.</p>
+
+                    <p>La paradoja está en que, en principio, se podría pensar que ambos gemelos se están moviendo en relación el uno con el otro, por lo que debería ocurrir lo mismo para los dos. Sin embargo, según la teoría de la relatividad especial, el gemelo que viaja a alta velocidad experimenta un tiempo más lento debido a su movimiento. Este es un efecto real y ha sido comprobado experimentalmente con relojes atómicos en aviones y satélites.</p>
+
+                    <p>Una forma de entenderlo con una analogía es pensar en un tren muy rápido que viaja de una ciudad a otra. Si estuvieras dentro de ese tren, no sentirías que te estás moviendo, porque no notarías nada que indique tu velocidad. Pero para una persona que está fuera del tren, podría ver que el tren se mueve a gran velocidad. Ahora, imagina que tienes un reloj en el tren. Desde el punto de vista de la persona fuera del tren, el reloj del tren parecería ir más despacio porque está moviéndose tan rápido. Para la persona en el tren, el reloj parece funcionar con normalidad. Sin embargo, cuando comparan los relojes al final, la persona fuera del tren verá que el reloj dentro del tren ha avanzado menos tiempo.</p>
+
+                    <p>La paradoja se resuelve reconociendo que el gemelo viajero está en un marco de referencia diferente al de su gemelo en la Tierra. El gemelo en la nave experimenta una aceleración y desaceleración que cambia su situación, y esto es lo que provoca que su reloj "se atrase" en comparación con el reloj del gemelo en la Tierra. Es una de las implicaciones más sorprendentes de la relatividad especial, que el tiempo no es algo absoluto y fijo, sino que puede variar dependiendo de la velocidad a la que te muevas.</p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h3>Paradoja del gato de Schrodinger</h3>
+                    <p>La Paradoja del Gato de Schrödinger es una famosa propuesta que el físico austriaco Erwin Schrödinger presentó en 1935 para ilustrar las extrañas y contraintuitivas implicaciones de la mecánica cuántica. La paradoja describe una situación en la que un gato, dentro de una caja cerrada, está en un estado de "superposición cuántica", es decir, en dos estados a la vez, hasta que se observe. Es una forma de mostrar lo que podría ocurrir cuando aplicamos las reglas de la mecánica cuántica a objetos macroscópicos, como un gato.</p>
+
+                    <p>Imagina que en la caja hay un átomo radiactivo, que tiene una probabilidad de desintegrarse o no en un tiempo determinado. Si el átomo se desintegra, libera una partícula que activa un mecanismo que mata al gato. Si no se desintegra, el gato sigue vivo. Según la mecánica cuántica, hasta que no se abra la caja y se observe el estado del gato, este está en una "superposición" de estar simultáneamente vivo y muerto. Es decir, el gato no está simplemente vivo o muerto, sino que está en una mezcla de ambos estados, hasta que se observe (o mida) de alguna manera.</p>
+
+                    <p>La paradoja es que la mecánica cuántica predice que, a nivel subatómico, las partículas pueden estar en múltiples estados a la vez (lo que se llama superposición), pero a nivel macroscópico, como con un gato, esperaríamos que el gato esté claramente vivo o muerto, no en ambos estados al mismo tiempo. Esto crea una contradicción, porque nos resulta difícil imaginar cómo una regla que funciona a escala subatómica podría aplicarse a objetos grandes y visibles como un gato.</p>
+
+                    <p>Para entenderlo mejor con una analogía, imagina que tienes una moneda. Si la lanzas, la mecánica cuántica sugiere que, mientras no la observes, la moneda está en un estado de superposición, siendo simultáneamente cara y cruz. Solo cuando miras la moneda, el estado se "colapsa" a una de las dos opciones: cara o cruz. Aplicado al gato, mientras no abramos la caja, el gato está en un estado de superposición de estar vivo y muerto, como la moneda que está en "ambos estados" hasta que se observa.</p>
+
+                    <p>La paradoja en realidad no es una verdadera situación en la que un gato pueda estar vivo y muerto al mismo tiempo, sino una forma de ilustrar lo extraño que resulta aplicar las reglas de la mecánica cuántica a objetos más grandes y familiares. La "resolución" de esta paradoja en la interpretación cuántica moderna, como la interpretación de Copenhague, sugiere que el estado del gato no está definido hasta que lo observamos, lo que plantea preguntas sobre el papel de la observación en la realidad física.</p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5" class="description">
+                    <h3>Paradoja del abuelo</h3>
+                    <p>La Paradoja del Abuelo es una famosa paradoja de los viajes en el tiempo, que plantea un escenario donde las leyes de la causalidad se ven comprometidas. La idea es simple: imagina que viajas al pasado y haces algo que impide que tu abuelo conozca a tu abuela, o incluso que tu abuelo nazca. Si esto ocurre, entonces tus padres no habrían nacido, lo que implica que tú nunca habrías existido. Pero si tú no existes, ¿cómo podrías haber viajado al pasado en primer lugar para evitar que tu abuelo naciera? Esto crea un ciclo de causa y efecto imposible, que parece contradictorio.</p>
+
+                    <p>La paradoja se basa en la pregunta: ¿Qué pasa si viajas al pasado y haces algo que cambia los eventos de tu propio nacimiento? Si, por ejemplo, viajas al pasado y evitas que tu abuelo se case con tu abuela, entonces tus padres nunca se habrían conocido, y por lo tanto, tú no habrías nacido. Pero si no naciste, ¿cómo podrías haber viajado al pasado en primer lugar para evitar ese matrimonio? Este tipo de situación es lo que se conoce como una paradoja temporal, ya que genera una contradicción en la lógica de los eventos y las relaciones causales.</p>
+
+                    <p>Para explicarlo con una analogía, imagina que estás jugando a un videojuego y tienes un botón en el juego que te permite deshacer todo lo que hiciste, es decir, reiniciar la partida. Si tú presionas ese botón en un momento clave del juego y logras deshacer tu propio progreso, ¿cómo puedes luego volver a jugar si el botón de deshacer ya ha reiniciado el juego desde el principio? Esto crea un ciclo sin fin, porque tu acción de "reiniciar" depende de tu existencia en el juego, pero tu existencia en el juego depende de no haber presionado ese botón.</p>
+
+                    <p>En cuanto a los viajes en el tiempo, algunas teorías sugieren que los viajes al pasado simplemente no serían posibles porque causarían paradojas como esta. Otras teorías, como la de los multiversos, sugieren que cuando cambias algo en el pasado, creas una nueva línea de tiempo o universo paralelo, por lo que no alteras tu propia existencia, sino que creas una realidad diferente en la que los eventos siguen un curso distinto.</p>
+
+                    <p>La Paradoja del Abuelo es un ejemplo clásico de cómo los viajes en el tiempo, aunque fascinantes en la teoría, pueden ser muy problemáticos desde un punto de vista lógico, ya que ponen en cuestión las leyes de causalidad y el funcionamiento del tiempo.</p>
+                </div>
+            
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h3>Paradojas de la Física</h3>
+                <a onclick="changeContent('Concepto 1.1')">Paradoja de la noche obscura</a>
+                <a onclick="changeContent('Concepto 2.2')">Paradoja de la hoja de té</a>
+                <a onclick="changeContent('Concepto 3.3')">Paradoja de los gemelos</a>
+                <a onclick="changeContent('Concepto 4.4')">Paradoja del gato de Schrodinger</a>
+                <a onclick="changeContent('Concepto 5.5')">Paradoja del abuelo</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <h3>Paradoja de la Noche Oscura</h3>
+                    <p>La Paradoja de la Noche Oscura se refiere a un misterio en el universo relacionado con la luz y el espacio. En términos simples, trata de la pregunta de por qué el cielo nocturno es oscuro, incluso si el universo es infinito y está lleno de estrellas. La idea es que, si el universo fuera infinito y estuviera lleno de estrellas distribuidas por todas partes, debería haber suficiente luz de esas estrellas para iluminar el cielo, y sin embargo, el espacio parece ser oscuro. Esta contradicción fue formulada por el astrónomo alemán Heinrich Olbers en el siglo XIX.</p>
+
+                    <p>La paradoja desafía nuestra intuición, porque si hay tantas estrellas en el universo, debería haber luz en todas direcciones, haciendo que el cielo sea brillante, no oscuro. Esto parece extraño, pero la resolución de la paradoja tiene que ver con la expansión del universo, la finitud de la edad del universo y la absorción de la luz.</p>
+
+                    <p>Hoy sabemos que el universo no es estático ni infinito en el sentido clásico, sino que está en expansión. La luz de las estrellas más distantes ha tenido que recorrer grandes distancias, y algunas de ellas no llegan a nosotros porque el universo es finito y las estrellas más lejanas están demasiado lejos para que su luz nos llegue. Además, la luz de las estrellas más distantes se desplaza hacia longitudes de onda más largas (desplazamiento al rojo), lo que también contribuye al oscurecimiento del cielo.</p>
+
+                    <p>Para explicarlo con una analogía, imagina que estás en un cuarto oscuro, pero dentro del cuarto hay muchas velas encendidas. Si miras en todas las direcciones, esperas ver luz. Sin embargo, si te alejas mucho de cada vela, la luz de esas velas se va desvaneciendo hasta que ya no puedes verla, incluso si las velas están encendidas. Esto sucede en el universo: aunque hay muchísimas estrellas, algunas están tan lejos que su luz no llega hasta nosotros, por lo que el cielo es oscuro.</p>
+
+                    <p>Otra forma de entenderlo es pensar en un árbol lleno de luces navideñas. Si estás cerca del árbol, puedes ver todas las luces, pero si te alejas mucho, las luces empiezan a verse más tenues y eventualmente ya no se ven. El universo tiene muchas "luces" (estrellas), pero están tan distantes que el cielo entre ellas no tiene luz suficiente para hacerlo brillar.</p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h3>Paradoja de la hoja de té</h3>
+                    <p>La Paradoja de la Hoja de Té es un concepto que proviene de la mecánica de fluidos y describe un fenómeno que ocurre cuando pones una hoja de té flotando en un líquido, como en una taza de té. La paradoja radica en que, a medida que el té se agita, la hoja de té comienza a moverse hacia el centro del vaso en lugar de moverse hacia las paredes, como podríamos esperar si solo pensáramos en la forma en que los objetos tienden a ir hacia los bordes debido a la fuerza centrífuga.</p>
+
+                    <p>Lo interesante de esta paradoja es que en un sistema rotatorio, como cuando estamos girando el té en la taza, la hoja de té no sigue la lógica de la rotación hacia las paredes (como ocurre con otros objetos que se desplazan hacia afuera cuando giran). En cambio, la hoja se dirige hacia el centro del vaso. Este comportamiento ocurre porque, en el caso de un fluido en movimiento, las fuerzas involucradas en la dinámica de la rotación y la interacción entre el fluido y el objeto (la hoja) hacen que la hoja se mueva hacia el centro.</p>
+
+                    <p>La paradoja puede ser explicada por la dinámica de los flujos en la taza. El agua en el centro de la taza se mueve más lentamente que el agua cerca de las paredes, lo que genera una especie de "vacío" en el centro que arrastra la hoja de té hacia él. A pesar de la fuerza centrífuga que normalmente empuja los objetos hacia afuera, la hoja de té se ve influenciada por las corrientes y el movimiento del líquido, lo que resulta en que se mueva hacia el centro de la taza.</p>
+
+                    <p>Para entenderlo con una analogía, imagina que estás en un carrusel (un tipo de rueda giratoria). Si solo te paras en el borde, sientes que eres empujado hacia afuera debido a la velocidad de la rotación. Sin embargo, si en lugar de estar en el borde, te pones en el centro del carrusel, verás que no experimentas esa misma sensación de "empuje". Algo similar pasa con la hoja de té: en lugar de ir hacia las paredes, va al centro, como si estuviera en el lugar más tranquilo del movimiento.</p>
+
+                    <p>Es un buen ejemplo de cómo las interacciones entre los objetos y su entorno (en este caso, el líquido) pueden generar resultados que no esperaríamos de forma intuitiva.</p>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h3>Paradoja de los gemelos</h3>
+                    <p>La Paradoja de los Gemelos es una famosa consecuencia de la teoría de la relatividad especial de Einstein. Esta paradoja describe una situación en la que dos gemelos, uno de los cuales viaja al espacio a una velocidad cercana a la de la luz, y el otro se queda en la Tierra, experimentan el paso del tiempo de manera diferente.</p>
+
+                    <p>La idea básica es que el gemelo que viaja en la nave espacial (en movimiento) experimenta el dilata del tiempo, lo que significa que su tiempo pasa más lentamente que el del gemelo que permanece en la Tierra. Cuando el gemelo viajero regresa a la Tierra, descubrirá que ha envejecido menos que su gemelo que se quedó en casa, a pesar de que ambos comenzaron como gemelos idénticos. Esto se debe a que, a medida que viaja a altas velocidades, el tiempo para el gemelo en la nave se "altera" y transcurre más despacio en comparación con el gemelo en reposo en la Tierra.</p>
+
+                    <p>La paradoja está en que, en principio, se podría pensar que ambos gemelos se están moviendo en relación el uno con el otro, por lo que debería ocurrir lo mismo para los dos. Sin embargo, según la teoría de la relatividad especial, el gemelo que viaja a alta velocidad experimenta un tiempo más lento debido a su movimiento. Este es un efecto real y ha sido comprobado experimentalmente con relojes atómicos en aviones y satélites.</p>
+
+                    <p>Una forma de entenderlo con una analogía es pensar en un tren muy rápido que viaja de una ciudad a otra. Si estuvieras dentro de ese tren, no sentirías que te estás moviendo, porque no notarías nada que indique tu velocidad. Pero para una persona que está fuera del tren, podría ver que el tren se mueve a gran velocidad. Ahora, imagina que tienes un reloj en el tren. Desde el punto de vista de la persona fuera del tren, el reloj del tren parecería ir más despacio porque está moviéndose tan rápido. Para la persona en el tren, el reloj parece funcionar con normalidad. Sin embargo, cuando comparan los relojes al final, la persona fuera del tren verá que el reloj dentro del tren ha avanzado menos tiempo.</p>
+
+                    <p>La paradoja se resuelve reconociendo que el gemelo viajero está en un marco de referencia diferente al de su gemelo en la Tierra. El gemelo en la nave experimenta una aceleración y desaceleración que cambia su situación, y esto es lo que provoca que su reloj "se atrase" en comparación con el reloj del gemelo en la Tierra. Es una de las implicaciones más sorprendentes de la relatividad especial, que el tiempo no es algo absoluto y fijo, sino que puede variar dependiendo de la velocidad a la que te muevas.</p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h3>Paradoja del gato de Schrodinger</h3>
+                    <p>La Paradoja del Gato de Schrödinger es una famosa propuesta que el físico austriaco Erwin Schrödinger presentó en 1935 para ilustrar las extrañas y contraintuitivas implicaciones de la mecánica cuántica. La paradoja describe una situación en la que un gato, dentro de una caja cerrada, está en un estado de "superposición cuántica", es decir, en dos estados a la vez, hasta que se observe. Es una forma de mostrar lo que podría ocurrir cuando aplicamos las reglas de la mecánica cuántica a objetos macroscópicos, como un gato.</p>
+
+                    <p>Imagina que en la caja hay un átomo radiactivo, que tiene una probabilidad de desintegrarse o no en un tiempo determinado. Si el átomo se desintegra, libera una partícula que activa un mecanismo que mata al gato. Si no se desintegra, el gato sigue vivo. Según la mecánica cuántica, hasta que no se abra la caja y se observe el estado del gato, este está en una "superposición" de estar simultáneamente vivo y muerto. Es decir, el gato no está simplemente vivo o muerto, sino que está en una mezcla de ambos estados, hasta que se observe (o mida) de alguna manera.</p>
+
+                    <p>La paradoja es que la mecánica cuántica predice que, a nivel subatómico, las partículas pueden estar en múltiples estados a la vez (lo que se llama superposición), pero a nivel macroscópico, como con un gato, esperaríamos que el gato esté claramente vivo o muerto, no en ambos estados al mismo tiempo. Esto crea una contradicción, porque nos resulta difícil imaginar cómo una regla que funciona a escala subatómica podría aplicarse a objetos grandes y visibles como un gato.</p>
+
+                    <p>Para entenderlo mejor con una analogía, imagina que tienes una moneda. Si la lanzas, la mecánica cuántica sugiere que, mientras no la observes, la moneda está en un estado de superposición, siendo simultáneamente cara y cruz. Solo cuando miras la moneda, el estado se "colapsa" a una de las dos opciones: cara o cruz. Aplicado al gato, mientras no abramos la caja, el gato está en un estado de superposición de estar vivo y muerto, como la moneda que está en "ambos estados" hasta que se observa.</p>
+
+                    <p>La paradoja en realidad no es una verdadera situación en la que un gato pueda estar vivo y muerto al mismo tiempo, sino una forma de ilustrar lo extraño que resulta aplicar las reglas de la mecánica cuántica a objetos más grandes y familiares. La "resolución" de esta paradoja en la interpretación cuántica moderna, como la interpretación de Copenhague, sugiere que el estado del gato no está definido hasta que lo observamos, lo que plantea preguntas sobre el papel de la observación en la realidad física.</p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5.5" class="description">
+                    <h3>Paradoja del abuelo</h3>
+                    <p>La Paradoja del Abuelo es una famosa paradoja de los viajes en el tiempo, que plantea un escenario donde las leyes de la causalidad se ven comprometidas. La idea es simple: imagina que viajas al pasado y haces algo que impide que tu abuelo conozca a tu abuela, o incluso que tu abuelo nazca. Si esto ocurre, entonces tus padres no habrían nacido, lo que implica que tú nunca habrías existido. Pero si tú no existes, ¿cómo podrías haber viajado al pasado en primer lugar para evitar que tu abuelo naciera? Esto crea un ciclo de causa y efecto imposible, que parece contradictorio.</p>
+
+                    <p>La paradoja se basa en la pregunta: ¿Qué pasa si viajas al pasado y haces algo que cambia los eventos de tu propio nacimiento? Si, por ejemplo, viajas al pasado y evitas que tu abuelo se case con tu abuela, entonces tus padres nunca se habrían conocido, y por lo tanto, tú no habrías nacido. Pero si no naciste, ¿cómo podrías haber viajado al pasado en primer lugar para evitar ese matrimonio? Este tipo de situación es lo que se conoce como una paradoja temporal, ya que genera una contradicción en la lógica de los eventos y las relaciones causales.</p>
+
+                    <p>Para explicarlo con una analogía, imagina que estás jugando a un videojuego y tienes un botón en el juego que te permite deshacer todo lo que hiciste, es decir, reiniciar la partida. Si tú presionas ese botón en un momento clave del juego y logras deshacer tu propio progreso, ¿cómo puedes luego volver a jugar si el botón de deshacer ya ha reiniciado el juego desde el principio? Esto crea un ciclo sin fin, porque tu acción de "reiniciar" depende de tu existencia en el juego, pero tu existencia en el juego depende de no haber presionado ese botón.</p>
+
+                    <p>En cuanto a los viajes en el tiempo, algunas teorías sugieren que los viajes al pasado simplemente no serían posibles porque causarían paradojas como esta. Otras teorías, como la de los multiversos, sugieren que cuando cambias algo en el pasado, creas una nueva línea de tiempo o universo paralelo, por lo que no alteras tu propia existencia, sino que creas una realidad diferente en la que los eventos siguen un curso distinto.</p>
+
+                    <p>La Paradoja del Abuelo es un ejemplo clásico de cómo los viajes en el tiempo, aunque fascinantes en la teoría, pueden ser muy problemáticos desde un punto de vista lógico, ya que ponen en cuestión las leyes de causalidad y el funcionamiento del tiempo.</p>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="inicio.html">Regresar al Inicio</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
